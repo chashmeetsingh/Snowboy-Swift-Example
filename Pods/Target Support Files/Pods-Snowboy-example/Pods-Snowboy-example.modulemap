@@ -1,0 +1,6 @@
+framework module Pods_Snowboy_example {
+  umbrella header "Pods-Snowboy-example-umbrella.h"
+
+  export *
+  module * { export * }
+}

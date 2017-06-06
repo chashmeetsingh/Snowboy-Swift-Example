@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21C9F874038CF3E449A2609C /* Pods_Snowboy_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E343FFE4CAB901628BC97C /* Pods_Snowboy_example.framework */; };
 		6D6697911EE7694E00109B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6697901EE7694E00109B9E /* AppDelegate.swift */; };
 		6D6697931EE7694E00109B9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6697921EE7694E00109B9E /* ViewController.swift */; };
 		6D6697961EE7694E00109B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6697941EE7694E00109B9E /* Main.storyboard */; };
 		6D6697981EE7694E00109B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6697971EE7694E00109B9E /* Assets.xcassets */; };
 		6D66979B1EE7694E00109B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6697991EE7694E00109B9E /* LaunchScreen.storyboard */; };
+		6DBBC9EE1EE76B3F0032C128 /* SnowboyWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6DBBC9ED1EE76B3F0032C128 /* SnowboyWrapper.mm */; };
+		6DBBC9F41EE770CE0032C128 /* common.res in Resources */ = {isa = PBXBuildFile; fileRef = 6DBBC9F21EE770CE0032C128 /* common.res */; };
+		6DBBC9F81EE770EE0032C128 /* libsnowboy-detect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBBC9F71EE770EE0032C128 /* libsnowboy-detect.a */; };
+		6DBBC9FA1EE773780032C128 /* alexa_02092017.umdl in Resources */ = {isa = PBXBuildFile; fileRef = 6DBBC9F91EE773780032C128 /* alexa_02092017.umdl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,16 @@
 		6D6697971EE7694E00109B9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D66979A1EE7694E00109B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D66979C1EE7694E00109B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DBBC9EC1EE76B3F0032C128 /* SnowboyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowboyWrapper.h; sourceTree = "<group>"; };
+		6DBBC9ED1EE76B3F0032C128 /* SnowboyWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SnowboyWrapper.mm; sourceTree = "<group>"; };
+		6DBBC9EF1EE76B4C0032C128 /* Snowboy-example-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Snowboy-example-Bridging-Header.h"; sourceTree = "<group>"; };
+		6DBBC9F21EE770CE0032C128 /* common.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = common.res; sourceTree = "<group>"; };
+		6DBBC9F61EE770E10032C128 /* snowboy-detect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "snowboy-detect.h"; sourceTree = "<group>"; };
+		6DBBC9F71EE770EE0032C128 /* libsnowboy-detect.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libsnowboy-detect.a"; sourceTree = "<group>"; };
+		6DBBC9F91EE773780032C128 /* alexa_02092017.umdl */ = {isa = PBXFileReference; lastKnownFileType = file; path = alexa_02092017.umdl; sourceTree = "<group>"; };
+		B7E343FFE4CAB901628BC97C /* Pods_Snowboy_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snowboy_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1773F48144ECD84F3781EEC /* Pods-Snowboy-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snowboy-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snowboy-example/Pods-Snowboy-example.debug.xcconfig"; sourceTree = "<group>"; };
+		E4832C6A0EE1E032C8B12D12 /* Pods-Snowboy-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snowboy-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snowboy-example/Pods-Snowboy-example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +44,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBBC9F81EE770EE0032C128 /* libsnowboy-detect.a in Frameworks */,
+				21C9F874038CF3E449A2609C /* Pods_Snowboy_example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		674DF9667F4712B7AFB94C89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7E343FFE4CAB901628BC97C /* Pods_Snowboy_example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6D6697841EE7694D00109B9E = {
 			isa = PBXGroup;
 			children = (
 				6D66978F1EE7694E00109B9E /* Snowboy-example */,
 				6D66978E1EE7694E00109B9E /* Products */,
+				E2F0AA99820F41B7CCCBF878 /* Pods */,
+				674DF9667F4712B7AFB94C89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +81,7 @@
 		6D66978F1EE7694E00109B9E /* Snowboy-example */ = {
 			isa = PBXGroup;
 			children = (
+				6DCDCD6C1EE76A3D005AF077 /* Resources */,
 				6D6697901EE7694E00109B9E /* AppDelegate.swift */,
 				6D6697921EE7694E00109B9E /* ViewController.swift */,
 				6D6697941EE7694E00109B9E /* Main.storyboard */,
@@ -64,6 +92,29 @@
 			path = "Snowboy-example";
 			sourceTree = "<group>";
 		};
+		6DCDCD6C1EE76A3D005AF077 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6DBBC9F21EE770CE0032C128 /* common.res */,
+				6DBBC9F91EE773780032C128 /* alexa_02092017.umdl */,
+				6DBBC9EC1EE76B3F0032C128 /* SnowboyWrapper.h */,
+				6DBBC9ED1EE76B3F0032C128 /* SnowboyWrapper.mm */,
+				6DBBC9EF1EE76B4C0032C128 /* Snowboy-example-Bridging-Header.h */,
+				6DBBC9F61EE770E10032C128 /* snowboy-detect.h */,
+				6DBBC9F71EE770EE0032C128 /* libsnowboy-detect.a */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E2F0AA99820F41B7CCCBF878 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1773F48144ECD84F3781EEC /* Pods-Snowboy-example.debug.xcconfig */,
+				E4832C6A0EE1E032C8B12D12 /* Pods-Snowboy-example.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D66979F1EE7694E00109B9E /* Build configuration list for PBXNativeTarget "Snowboy-example" */;
 			buildPhases = (
+				2D5DA7D55252CB1B42A12741 /* [CP] Check Pods Manifest.lock */,
 				6D6697891EE7694D00109B9E /* Sources */,
 				6D66978A1EE7694D00109B9E /* Frameworks */,
 				6D66978B1EE7694D00109B9E /* Resources */,
+				53F1C799402701B99F3587BB /* [CP] Embed Pods Frameworks */,
+				06ED913A5EC930271DD71E8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +151,7 @@
 					6D66978C1EE7694D00109B9E = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 29QXBB297F;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,18 +180,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D66979B1EE7694E00109B9E /* LaunchScreen.storyboard in Resources */,
+				6DBBC9FA1EE773780032C128 /* alexa_02092017.umdl in Resources */,
 				6D6697981EE7694E00109B9E /* Assets.xcassets in Resources */,
 				6D6697961EE7694E00109B9E /* Main.storyboard in Resources */,
+				6DBBC9F41EE770CE0032C128 /* common.res in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06ED913A5EC930271DD71E8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Snowboy-example/Pods-Snowboy-example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D5DA7D55252CB1B42A12741 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		53F1C799402701B99F3587BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Snowboy-example/Pods-Snowboy-example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6D6697891EE7694D00109B9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBBC9EE1EE76B3F0032C128 /* SnowboyWrapper.mm in Sources */,
 				6D6697931EE7694E00109B9E /* ViewController.swift in Sources */,
 				6D6697911EE7694E00109B9E /* AppDelegate.swift in Sources */,
 			);
@@ -261,26 +367,43 @@
 		};
 		6D6697A01EE7694E00109B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1773F48144ECD84F3781EEC /* Pods-Snowboy-example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 29QXBB297F;
 				INFOPLIST_FILE = "Snowboy-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Snowboy-example",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chashmeet.Snowboy-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Snowboy-example/Snowboy-example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		6D6697A11EE7694E00109B9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4832C6A0EE1E032C8B12D12 /* Pods-Snowboy-example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 29QXBB297F;
 				INFOPLIST_FILE = "Snowboy-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Snowboy-example",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chashmeet.Snowboy-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Snowboy-example/Snowboy-example-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -304,6 +427,7 @@
 				6D6697A11EE7694E00109B9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
