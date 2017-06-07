@@ -11,7 +11,7 @@ import AudioKit
 
 class ViewController: UIViewController, EZMicrophoneDelegate {
     
-    var microphone = EZMicrophone()
+    var microphone: EZMicrophone!
     
     let WAKE_WORD = "Susi"
     let RESOURCE = Bundle.main.path(forResource: "common", ofType: "res")
@@ -48,21 +48,22 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
         audioStreamBasicDescription.mBitsPerChannel = 16
         audioStreamBasicDescription.mFormatFlags = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagsNativeEndian | kAudioFormatFlagIsPacked
         audioStreamBasicDescription.mReserved = 0
-        
+    
+        microphone = EZMicrophone.shared()
+        microphone.delegate = self
         let inputs: [Any] = EZAudioDevice.inputDevices()
         microphone.device = inputs.last as! EZAudioDevice
-        microphone = EZMicrophone(delegate: self, with: audioStreamBasicDescription)
         microphone.startFetchingAudio()
-//        microphone.stopFetchingAudio()
     }
     
-    func microphone(_ microphone: AKMicrophone, hasAudioReceived buffer: [Float], withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
+    func microphone(_ microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>?>!, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
         DispatchQueue.main.async(execute: {() -> Void in
-            let result: Int =  Int(self.wrapper.runDetection(buffer, length: Int32(bufferSize)))
+            let array = Array(UnsafeBufferPointer(start: buffer, count: Int(bufferSize)))
+            
+            let result: Int =  Int(self.wrapper.runDetection(array, length: Int32(bufferSize)))
             if result == 1 {
                 print("Hotword Detected")
-            }
-            else {
+            } else {
                 print("No Hotword Detected")
             }
         })

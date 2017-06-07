@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        var session = AVAudioSession.sharedInstance()
+        var error: Error?
+        try? session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        try? session.setMode(AVAudioSessionModeMeasurement)
+        var doChangeDefaultRoute: UInt32 = 1
+//        AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker, MemoryLayout<doChangeDefaultRoute>.size, doChangeDefaultRoute)
+        try? session.setActive(true)
+        if error != nil {
+            print("ERROR\(error?.localizedDescription)")
+        }
+        
         return true
     }
 
