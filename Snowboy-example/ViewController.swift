@@ -58,13 +58,12 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
     
     func microphone(_ microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>?>!, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
         DispatchQueue.main.async(execute: {() -> Void in
-            let array = Array(UnsafeBufferPointer(start: buffer, count: Int(bufferSize)))
+            
+            let array = Array(UnsafeBufferPointer(start: buffer.pointee, count:Int(bufferSize)))
             
             let result: Int =  Int(self.wrapper.runDetection(array, length: Int32(bufferSize)))
             if result == 1 {
                 print("Hotword Detected")
-            } else {
-                print("No Hotword Detected")
             }
         })
     }
@@ -73,7 +72,6 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
         super.didReceiveMemoryWarning()
         initSnowboy()
     }
-
 
 }
 
